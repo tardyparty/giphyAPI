@@ -39,15 +39,37 @@ $(document).on("click", "button", function(){
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        var gifs = response.data.images.fixed_width_still.url;
-        var rating = response.data.rating;
+
+      // loops through each result of the query and push it to html
+      for (var i=0; i < response.data.length; i++){
+
+        // assigns the data properties to variables
+        var rating = response.data[i].rating;
+        var still = response.data[i].images.fixed_width_still.url;
+        var animate = response.data[i].images.fixed_width.url;
+
         $("#gifs").prepend(`
-        <img class='clickGif' src='${gifs}'>
-        <p>${rating}</p>`);
-      });
+        <div class='imgDiv'>
+          <img class='clickGif' src='${still}' data-still='${still}' data-animate='${animate}' data-state='still'>
+          <p class='rating'>Rating: ${rating}</p>
+        </div>
+        `);
+      };
+    });
 });
 
-// $(document).on("click", ".clickGif", function(){
+// when the gif is clicked it will either start or stop depending
+$(".clickGif").on("click", function() {
 
-// })
+  // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+  var state = $(this).attr("data-state");
+
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+});
 

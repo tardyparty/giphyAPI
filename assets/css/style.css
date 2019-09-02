@@ -1,5 +1,5 @@
 body {
-    background-color: beige;
+    background-color: white;
 }
 
 button {
@@ -9,6 +9,25 @@ button {
     margin: 2px;
     color: white;
     border-radius: 5px;
+}
+
+.imgDiv {
+    position: relative;
+    width: 225px;
+    height: auto;
+    margin: 30px;
+    float: left;
+}
+
+.clickGif {
+    height: 225px;
+}
+
+.rating {
+    position: absolute;
+    bottom: -25px;
+    font-size: 20pt;
+    text-align: center;
 }
 
 button:hover {
