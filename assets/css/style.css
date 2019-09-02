@@ -1,0 +1,16 @@
+body {
+    background-color: beige;
+}
+
+button {
+    display: inline-block;
+    font-size: 20pt;
+    background-color: steelblue;
+    margin: 2px;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
