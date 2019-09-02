@@ -50,7 +50,7 @@ $(document).on("click", "button", function(){
 
         $("#gifs").prepend(`
         <div class='imgDiv'>
-          <img class='clickGif' src='${still}' data-still='${still}' data-animate='${animate}' data-state='still'>
+          <img src='${still}' data-still='${still}' data-animate='${animate}' data-state='still' class='clickGif'>
           <p class='rating'>Rating: ${rating}</p>
         </div>
         `);
@@ -59,7 +59,8 @@ $(document).on("click", "button", function(){
 });
 
 // when the gif is clicked it will either start or stop depending
-$(".clickGif").on("click", function() {
+$(document).on("click", ".clickGif", function(){
+  console.log("clickGif clicks");
 
   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
   var state = $(this).attr("data-state");
