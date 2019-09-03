@@ -13,6 +13,9 @@ var endURL = "&api_key=OGhYmnPJ3MgZO707Wi2K9MxzY0Mu2HUz&limit=10"
 
 // create buttons for each array item 
 function loadButtons(){
+  // empty previous array of buttons before adding new buttons
+  $("#buttons").empty();
+
   for (var i=0; i<topics.length; i++){
       $("#buttons").append(`
       <button>${topics[i]}</button>
