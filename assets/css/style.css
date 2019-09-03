@@ -11,16 +11,39 @@ button {
     border-radius: 5px;
 }
 
+#addButton {
+    float: right;
+    margin: 30px;
+}
+
+label {
+    font-size: 20pt;
+    color: steelblue;
+}
+
+#newAnimal {
+    font-size: 20pt;
+    color: steelblue;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+}
+
+#submitButton {
+    font-size: 20pt;
+    color: white;
+    background-color: steelblue;
+    border-radius: 5px;
+}
+
 .imgDiv {
     position: relative;
-    width: 225px;
-    height: auto;
-    margin: 30px;
     float: left;
 }
 
 .clickGif {
-    height: 225px;
+    margin: 30px;
+    width: 250px;
+    height: auto;
 }
 
 .rating {
