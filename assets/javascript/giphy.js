@@ -55,9 +55,14 @@ $(document).on("click", "button", function(){
 
         $("#gifs").prepend(`
         <div class='imgDiv'>
-          <img src='${still}' data-still='${still}' data-animate='${animate}' data-state='still' class='clickGif'>
-          <p class='data'>${title}</p>
-          <p class='data'>Rating: ${rating}</p>
+            <img 
+              src='${still}' 
+              data-still='${still}' 
+              data-animate='${animate}' 
+              data-state='still' 
+              class='clickGif'>
+            <p class='data'>${title}</p>
+            <p class='data'> Rating: ${rating}</p>
         </div>
         `);
       };
