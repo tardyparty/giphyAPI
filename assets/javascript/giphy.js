@@ -1,4 +1,5 @@
 
+
 //  array of topics to start with
 var topics = [
     "dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", 
@@ -7,9 +8,11 @@ var topics = [
     "salamander", "frog",
 ]
 
+
 // builds the url for the api query
 var starterURL = "https://api.giphy.com/v1/gifs/search?q=";
 var endURL = "&api_key=OGhYmnPJ3MgZO707Wi2K9MxzY0Mu2HUz&limit=10"
+
 
 // create buttons for each array item 
 function loadButtons(){
@@ -18,13 +21,15 @@ function loadButtons(){
 
   for (var i=0; i<topics.length; i++){
       $("#buttons").append(`
-      <button>${topics[i]}</button>
+      <button class="btn">${topics[i]}</button>
       `);
   }
 }
 
+
 // calls button function initially
 loadButtons();
+
 
 // when a button is clicked, the gifs will appear at the top of the page with their rating
 $(document).on("click", "button", function(){
@@ -57,6 +62,7 @@ $(document).on("click", "button", function(){
     });
 });
 
+
 // when the gif is clicked it will either start or stop depending
 $(document).on("click", ".clickGif", function(){
 
@@ -72,7 +78,6 @@ $(document).on("click", ".clickGif", function(){
   }
 });
 
-// Add a form to your page that takes a value from a user input box and adds it to your topics array. Then make a function call that takes each topic in the array and remakes the buttons on the page.
 
 // takes value of user animal and creates a new button for it
 $(document).on("click", "#submitButton", function(event){
@@ -85,3 +90,4 @@ $(document).on("click", "#submitButton", function(event){
   // rebuilds all buttons with the new array
   loadButtons();
 })
+
