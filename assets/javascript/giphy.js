@@ -49,13 +49,15 @@ $(document).on("click", "button", function(){
 
         // assigns the data properties to variables
         var rating = result.rating;
+        var title = result.title;
         var still = result.images.fixed_width_still.url;
         var animate = result.images.fixed_width.url;
 
         $("#gifs").prepend(`
         <div class='imgDiv'>
           <img src='${still}' data-still='${still}' data-animate='${animate}' data-state='still' class='clickGif'>
-          <p class='rating'>Rating: ${rating}</p>
+          <p class='data'>${title}</p>
+          <p class='data'>Rating: ${rating}</p>
         </div>
         `);
       };
