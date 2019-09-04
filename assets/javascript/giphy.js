@@ -84,11 +84,11 @@ $(document).on("click", ".clickGif", function(){
 // takes value of user animal and creates a new button for it
 $(document).on("click", "#submitButton", function(event){
   event.preventDefault();
-  console.log('submit button');
+
   // adds user animal to the topics array
   var userSub = $("#newAnimal").val();
   topics.push(userSub);
-  console.log(topics);
+  
   // rebuilds all buttons with the new array
   loadButtons();
 })
